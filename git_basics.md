@@ -2,6 +2,6 @@
 
 ### making a local repo and uploading it to github
 
-```bash
+```python
 git add
 ```
