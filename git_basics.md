@@ -30,7 +30,7 @@ create an empty repo and copy SSH --> This is step is to connect the local repo 
 git remote add origin <SSH>
 ```
 
-	USing following command wil show any remote repo that is connected to the local repo
+USing following command wil show any remote repo that is connected to the local repo
 
 ```
 git remote -v
