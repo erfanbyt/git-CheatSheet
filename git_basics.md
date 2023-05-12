@@ -23,6 +23,12 @@ Commit the changes
 git commit -m 'message'
 ```
 
+to do adding and committing at the same time (not recommended). Only works for modified parts not the newly created ones.
+
+```
+git commit -am 'message'
+```
+
 4. step 4:
 create an empty repo and copy SSH --> This is step is to connect the local repo to remote repo
 
@@ -89,6 +95,106 @@ When we make a PR from the feature branch to the master branch, every one can do
 ```
 git pull
 ```
+
+#### Deleting a branch
+After merging the branch to the main branch, we need to delete the branch
+
+This command is used for deleting local branches that are already merged.
+
+```
+git branch -d <branch name>
+```
+
+#### merge conflicts
+In some cases, there will be conflict between the changes in the feature branch and the main branch. When merging 2 branches and this conflict exists, the conflict error will show and and you need to manually fix the issue in your code editor, etc. 
+
+
+#### Undoing mistakes
+after adding using 
+
+```
+git add 
+```
+
+You can unstage changes by using 
+
+```
+git reset <file name>
+```
+
+to undo a commit, the following command is used.
+
+```
+git reset HEAD~1
+```
+
+HEAD --> means a pointer heading to the last commit. 
+
+HEAD~1 --> this will move one step further and put the head to the previous commit. 
+
+Git commits are differentiated by their hashes and they can be accessed using 
+
+```
+git log
+```
+
+if you want to undo a certain commit back in time, you need to get the hash of that commit and then use
+
+```
+git reset <commit-hash>
+```
+
+To undo several commits and removing them you do the following.
+
+```
+git reset --hard <commit-hash>
+```
+it will remove all the commits after the hash provided infront of it.
+
+
+#### Forking
+
+It will make a full copy of a repo. You do not fork your own repo as you have access to all the code there! but you do not have access to other people repos. So you need to fork on their repo!
+
+After forking a repo, you now have full access to everything. Bring it down to your local machine and start doing changes and then ask for PR to the main repo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
